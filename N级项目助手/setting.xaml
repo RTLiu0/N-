@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="N级项目助手.setting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:N级项目助手"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel  BorderThickness="20">
+        <RelativePanel  x:Name="about_panel"   >
+            <TextBlock x:Name="about" TextWrapping="Wrap" Text="关于" FontSize="30"/>
+            <TextBlock x:Name="vision" RelativePanel.Below="about" Text="版本：" />
+            <TextBlock x:Name="vision_id" RelativePanel.Below="about"  RelativePanel.RightOf="vision"/>
+            <TextBlock x:Name="powered" RelativePanel.Below="vision" Text="©2021 武烈河软件研究会。保留所有权力。"/>
+            <TextBlock x:Name="email" Text="联系我们：" RelativePanel.Below="powered"/>
+            <TextBlock x:Name="email_id" RelativePanel.Below="powered" RelativePanel.RightOf="email" />
+        </RelativePanel>
+    </StackPanel>
+</Page>

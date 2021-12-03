@@ -1,0 +1,26 @@
+﻿<ContentDialog
+    x:Class="N级项目助手.打包"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:N级项目助手"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="打包文件"
+    PrimaryButtonText="打包"
+    SecondaryButtonText="取消"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+
+    <StackPanel>
+        <TextBlock x:Name="input"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" BorderThickness="5">
+            <Button Content="名称" Click="Button_Click"/>
+            <Button Content="编号" Click="Button_Click_1"/>
+            <Button Content="组名" Click="Button_Click_2"/>
+            <Button Content="班级"    Click="Button_Click_3"/>
+            <Button Content="教师" Click="Button_Click_4"/>
+        </StackPanel>
+        
+    </StackPanel>
+</ContentDialog>

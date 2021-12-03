@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="N级项目助手.Main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:N级项目助手"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView  x:Name="hambuger" IsBackButtonVisible="Collapsed" ItemInvoked="NvAll_ItemInvoked"  Header="主页">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Home" Content="主页" Tag="SamplePage1"  />
+                <NavigationViewItem Icon="PostUpdate" Content="团队" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Calendar" Content="项目打包" Tag="SamplePage3" />
+            </NavigationView.MenuItems>
+            <Frame x:Name="ContentFrame"/>
+        </NavigationView>
+        
+    </Grid>
+</Page>

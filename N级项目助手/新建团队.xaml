@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="N级项目助手.新建团队"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:N级项目助手"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <StackPanel BorderThickness="20" >
+            <TextBlock x:Name="aaa" Text="项目信息" TextWrapping="Wrap" FontSize="32" HorizontalAlignment="Center"/>
+            <StackPanel BorderThickness="10">
+                <TextBox x:Name="team_name" Header="项目名称:" PlaceholderText="在这输入项目名称" TextWrapping="Wrap" MaxWidth="400" BorderThickness="5"/>
+                <TextBox x:Name="team_num" Header="项目编号:" PlaceholderText="在这输入项目编号" TextWrapping="Wrap" MaxWidth="400" BorderThickness="5"/>
+                <TextBox x:Name="team_group" Header="小组名称:" PlaceholderText="在这输入小组名称" TextWrapping="Wrap" MaxWidth="400" BorderThickness="5"/>
+                <TextBox x:Name="team_class" Header="班级:" PlaceholderText="在这输入班级" TextWrapping="Wrap" MaxWidth="400" BorderThickness="5"/>
+                <TextBox x:Name="team_teacher" Header="教师:" PlaceholderText="在这输入教师" TextWrapping="Wrap" MaxWidth="400" BorderThickness="5"/>
+                <!--ComboBox x:Name="sel_type" HorizontalAlignment="Center" Header="选择作业类型"/-->
+            </StackPanel>
+            <Button Content="完成" Click="Button_Click" HorizontalAlignment="Center" BorderThickness="10"/>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

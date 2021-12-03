@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="N级项目助手.团队"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:N级项目助手"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView x:Name="User" PaneDisplayMode="Top" IsBackButtonVisible="Collapsed" NavigationView.IsSettingsVisible="False" ItemInvoked="NvAll_ItemInvoked" >
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Target" Content="成员管理" Tag="SamplePage1"  />
+                <NavigationViewItem Icon="Import" Content="分工管理" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Flag" Content="项目总览" Tag="a" />
+            </NavigationView.MenuItems>
+            <Frame x:Name="ContentFrame"/>
+        </NavigationView>
+    </Grid>
+</Page>

@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="N级项目助手.分工管理"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:N级项目助手"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="duty_stream"  >
+            <StackPanel   BorderThickness="20" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="分工："/>
+                <TextBlock   x:Name="State" Text="{Binding Name }"  />
+                <Rectangle Width="20"/>
+                <TextBlock Text="重要性："/>
+                <TextBlock   x:Name="io" Text="{Binding Level}"  />
+                <Rectangle Width="20"/>
+                <TextBlock Text="人数："/>
+                <TextBlock   x:Name="i" Text="{Binding Count}"  />
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="weight_stream"  >
+            <StackPanel   BorderThickness="20" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="级别："/>
+                <TextBlock   x:Name="State" Text="{Binding Level }"  />
+                <Rectangle Width="20"/>
+                <TextBlock Text="人数："/>
+                <TextBlock   x:Name="io" Text="{Binding Count}"  />
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    
+    <StackPanel BorderThickness="50">
+        <StackPanel Orientation="Horizontal"  BorderThickness="25" HorizontalAlignment="Center">
+            <ToggleButton Content="分工设置" x:Name="TBS" Click="Button_Click"/>
+            <Rectangle Width="30" />
+            <ToggleButton Content="权重设置" x:Name="TBS1" Click="Button_Click_1"/>
+        </StackPanel>
+        <StackPanel x:Name="duty_p">
+            <Button Content="添加分工" HorizontalAlignment="Center" Click="Button_Click_2"/>
+            <ScrollViewer x:Name="duty">
+                <StackPanel Orientation="Vertical" BorderThickness="20">
+                    <ListView   AllowDrop="True" x:Name="mem_listview"   ItemTemplate="{StaticResource duty_stream}" SelectionMode="None" IsItemClickEnabled="True"  ItemClick="mem_listview_ItemClick" />
+
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+
+        <StackPanel x:Name="wei_p">
+            <Button Content="添加权重" HorizontalAlignment="Center" Click="Button_Click_3"/>
+            <ScrollViewer x:Name="weight">
+                <StackPanel Orientation="Vertical" BorderThickness="20">
+                    <ListView   AllowDrop="True" x:Name="weight_listview"   ItemTemplate="{StaticResource weight_stream}" SelectionMode="None" IsItemClickEnabled="True"  ItemClick="weight_listview_ItemClick" />
+
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </StackPanel>
+</Page>
